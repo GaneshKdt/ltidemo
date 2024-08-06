@@ -1,0 +1,54 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.0.xsd ">
+ 
+	<mvc:annotation-driven />
+<mvc:cors>
+    <mvc:mapping path="/**"
+        allowed-origins="*"
+        allowed-headers="Content-Type, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Authorization, X-Requested-With, requestId, Correlation-Id"
+        allowed-methods="GET, PUT, POST, DELETE"/>
+</mvc:cors>
+	<context:component-scan base-package="ltidemo" />
+	<mvc:default-servlet-handler />
+ 
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<util:properties id="propertyConfigurer"
+		location="file:c:/NMIMS_PROPERTY_FILE/ngasce.properties" />
+	<context:property-placeholder
+		properties-ref="propertyConfigurer" order="0" ignore-unresolvable="true" />
+	<context:property-placeholder
+		location="file:${catalina.base}/conf/application.properties" order="1" />
+ 
+
+    <mvc:resources location="/assets/" mapping="/assets/**" />
+ <tx:annotation-driven/>
+</beans>
+
+	

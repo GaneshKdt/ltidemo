@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+ 
+	<property name="catalina-base" value="${catalina.base}/logs/ltidemo_logs" />
+ 	
+ 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %level %C{1.}.%M\(%line\) - %m%n
+            </Pattern>
+        </layout>
+    </appender>
+ 	
+    <appender name="ltidemo" class="ch.qos.logback.core.rolling.RollingFileAppender">
+       
+		<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+			<providers>
+				<timestamp>
+					<timeZone>UTC</timeZone>
+				</timestamp>
+				<version/>
+				<logLevel/>
+				<message/>
+				<loggerName/>
+				<threadName/>
+				<context/>
+				<pattern>
+                    <pattern>
+                        {
+                            "trace": {
+                                "trace_id": "%mdc{X-B3-TraceId}",
+                                "span_id": "%mdc{X-B3-SpanId}",
+                                "parent_span_id": "%mdc{X-B3-ParentSpanId}",
+                                "exportable": "%mdc{X-Span-Export}"
+                            }
+                        }
+                    </pattern>
+				</pattern>
+				  <mdc>
+                    <excludeMdcKeyName>traceId</excludeMdcKeyName>
+                    <excludeMdcKeyName>spanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>parentId</excludeMdcKeyName>
+                    <excludeMdcKeyName>spanExportable</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-TraceId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-SpanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-ParentSpanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-Span-Export</excludeMdcKeyName>
+                </mdc>
+                <stackTrace/>
+			</providers>
+		</encoder>
+ 		 <!-- rollover daily  -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${catalina-base}/ltidemo/%d{yyyy-MM,aux}/ltidemo-%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+	 <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <springProperty scope="context" name="ltidemo" source="spring.application.name"/>
+	<!-- Example for logging into the build folder of your project -->
+	<property name="LOG_FILE" value="${BUILD_FOLDER:-build}/${ltidemo}"/>
+	
+	<!-- You can override this to have a custom pattern -->
+	<property name="CONSOLE_LOG_PATTERN"
+			  value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+	<!-- Appender to log to console -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<!-- Minimum logging level to be presented in the console logs-->
+			<level>DEBUG</level>
+		</filter>
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>
+	
+	<!-- You can override this to have a custom pattern -->
+	<property name="CONSOLE_LOG_PATTERN"
+			  value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+	<!-- Appender to log to console -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<!-- Minimum logging level to be presented in the console logs-->
+			<level>DEBUG</level>
+		</filter>
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>​
+	
+	<!-- Appender to log to file in a JSON format -->
+	<appender name="logstash" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+		<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+			<providers>
+				<timestamp>
+					<timeZone>UTC</timeZone>
+				</timestamp>
+				<version/>
+				<logLevel/>
+				<message/>
+				<loggerName/>
+				<threadName/>
+				<context/>
+				<pattern>
+                    <pattern>
+                        {
+                            "trace": {
+                                "trace_id": "%mdc{X-B3-TraceId}",
+                                "span_id": "%mdc{X-B3-SpanId}",
+                                "parent_span_id": "%mdc{X-B3-ParentSpanId}",
+                                "exportable": "%mdc{X-Span-Export}"
+                            }
+                        }
+                    </pattern>
+				</pattern>
+				  <mdc>
+                    <excludeMdcKeyName>traceId</excludeMdcKeyName>
+                    <excludeMdcKeyName>spanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>parentId</excludeMdcKeyName>
+                    <excludeMdcKeyName>spanExportable</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-TraceId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-SpanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-B3-ParentSpanId</excludeMdcKeyName>
+                    <excludeMdcKeyName>X-Span-Export</excludeMdcKeyName>
+                </mdc>
+                <stackTrace/>
+			</providers>
+		</encoder>
+	</appender>
+    <root level="info">
+        <appender-ref ref="ltidemo" />
+    </root>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</configuration>

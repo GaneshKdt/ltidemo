@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2019-09-28T10:35:54Z" cacheDuration="PT1570098954S" entityID="https://studentzone-ngasce.nmims.edu/ltidemo/metadata/mettl">
+  <md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIE5DCCA8ygAwIBAgIJALUFayfWyf0pMA0GCSqGSIb3DQEBCwUAMIGmMQswCQYDVQQGEwJJTjEUMBIGA1UECBMLTWFoYXJhc2h0cmExDzANBgNVBAcTBk11bWJhaTEOMAwGA1UEChMFTk1JTVMxDzANBgNVBAsTBk5HQVNDRTElMCMGA1UEAxMcc3R1ZGVudHpvbmUtbmdhc2NlLm5taW1zLmVkdTEoMCYGCSqGSIb3DQEJARYZc2hpdi5nb2xhbmkuZXh0QG5taW1zLmVkdTAgFw0xOTA1MTAxMDU5NTJaGA8yMDUyMDMxNzEwNTk1MlowgaYxCzAJBgNVBAYTAklOMRQwEgYDVQQIEwtNYWhhcmFzaHRyYTEPMA0GA1UEBxMGTXVtYmFpMQ4wDAYDVQQKEwVOTUlNUzEPMA0GA1UECxMGTkdBU0NFMSUwIwYDVQQDExxzdHVkZW50em9uZS1uZ2FzY2Uubm1pbXMuZWR1MSgwJgYJKoZIhvcNAQkBFhlzaGl2LmdvbGFuaS5leHRAbm1pbXMuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtWPncl0R+NcztK+XFBBIHh0x9ZuL0tWsDM1IstwMmzv5czwuiK/ux4cq4fDtV+L0hfZd0y+GkWv9L7gqwXNf7Me9H13cok1BSL+stghHMpYlvsUWV51nUBN8oN4UJrS4jTQnFmFHHGC8RW4I3BPsbVDLFgPQ2gfnXtCn6VwBRBAYEmNzLja73QbfnXZCNQWRWzzENZVaMdge9PM8DVcBwe0y0FOwbPSj1zBEc6Zee0+PmlJnEsO0Lh0aUQ2x8PwwRrODapToR6my0nIJTRnBrATjKdwtPRbm5ee0quyyh/uY5YsqpkXQd+lo+lVUP01aRFSgBB7vSqNrv47YYa621wIDAQABo4IBDzCCAQswHQYDVR0OBBYEFEnHg/kW+48jvzr6uSQSk4NWszCZMIHbBgNVHSMEgdMwgdCAFEnHg/kW+48jvzr6uSQSk4NWszCZoYGspIGpMIGmMQswCQYDVQQGEwJJTjEUMBIGA1UECBMLTWFoYXJhc2h0cmExDzANBgNVBAcTBk11bWJhaTEOMAwGA1UEChMFTk1JTVMxDzANBgNVBAsTBk5HQVNDRTElMCMGA1UEAxMcc3R1ZGVudHpvbmUtbmdhc2NlLm5taW1zLmVkdTEoMCYGCSqGSIb3DQEJARYZc2hpdi5nb2xhbmkuZXh0QG5taW1zLmVkdYIJALUFayfWyf0pMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAAd8OgIwkd+DNGaMLy0zP/jVOKFkGoxPvrMRXdhODtelntd4MmPIvDXbecSiq8EEisK4HTikLGOYT74FPLD9vUuc2NRoBSotj6C29erRGJDHwnF7hDdJvSiqO4/Fs3eVRfWmZVVfoBhmjgAye5ZUimo64hEFAUVjh0dZgDlXtNbOZs7rmToXcY/0kMb8oJ0yQ+O5ibxGBqfHbuIHlMfky8ihbqj+1aNMAGHv3FIyJHiVzo3Ef04uv4SwDBQb58qTvEcgJVvtYERrPmrsj8La0rdkSzCZF+C+0qj5hTsbTWIz+XBKncAcjdqhsaE9HdoaRzsazBmdjRNTrkbkC/apBQg=</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIE5DCCA8ygAwIBAgIJALUFayfWyf0pMA0GCSqGSIb3DQEBCwUAMIGmMQswCQYDVQQGEwJJTjEUMBIGA1UECBMLTWFoYXJhc2h0cmExDzANBgNVBAcTBk11bWJhaTEOMAwGA1UEChMFTk1JTVMxDzANBgNVBAsTBk5HQVNDRTElMCMGA1UEAxMcc3R1ZGVudHpvbmUtbmdhc2NlLm5taW1zLmVkdTEoMCYGCSqGSIb3DQEJARYZc2hpdi5nb2xhbmkuZXh0QG5taW1zLmVkdTAgFw0xOTA1MTAxMDU5NTJaGA8yMDUyMDMxNzEwNTk1MlowgaYxCzAJBgNVBAYTAklOMRQwEgYDVQQIEwtNYWhhcmFzaHRyYTEPMA0GA1UEBxMGTXVtYmFpMQ4wDAYDVQQKEwVOTUlNUzEPMA0GA1UECxMGTkdBU0NFMSUwIwYDVQQDExxzdHVkZW50em9uZS1uZ2FzY2Uubm1pbXMuZWR1MSgwJgYJKoZIhvcNAQkBFhlzaGl2LmdvbGFuaS5leHRAbm1pbXMuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtWPncl0R+NcztK+XFBBIHh0x9ZuL0tWsDM1IstwMmzv5czwuiK/ux4cq4fDtV+L0hfZd0y+GkWv9L7gqwXNf7Me9H13cok1BSL+stghHMpYlvsUWV51nUBN8oN4UJrS4jTQnFmFHHGC8RW4I3BPsbVDLFgPQ2gfnXtCn6VwBRBAYEmNzLja73QbfnXZCNQWRWzzENZVaMdge9PM8DVcBwe0y0FOwbPSj1zBEc6Zee0+PmlJnEsO0Lh0aUQ2x8PwwRrODapToR6my0nIJTRnBrATjKdwtPRbm5ee0quyyh/uY5YsqpkXQd+lo+lVUP01aRFSgBB7vSqNrv47YYa621wIDAQABo4IBDzCCAQswHQYDVR0OBBYEFEnHg/kW+48jvzr6uSQSk4NWszCZMIHbBgNVHSMEgdMwgdCAFEnHg/kW+48jvzr6uSQSk4NWszCZoYGspIGpMIGmMQswCQYDVQQGEwJJTjEUMBIGA1UECBMLTWFoYXJhc2h0cmExDzANBgNVBAcTBk11bWJhaTEOMAwGA1UEChMFTk1JTVMxDzANBgNVBAsTBk5HQVNDRTElMCMGA1UEAxMcc3R1ZGVudHpvbmUtbmdhc2NlLm5taW1zLmVkdTEoMCYGCSqGSIb3DQEJARYZc2hpdi5nb2xhbmkuZXh0QG5taW1zLmVkdYIJALUFayfWyf0pMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAAd8OgIwkd+DNGaMLy0zP/jVOKFkGoxPvrMRXdhODtelntd4MmPIvDXbecSiq8EEisK4HTikLGOYT74FPLD9vUuc2NRoBSotj6C29erRGJDHwnF7hDdJvSiqO4/Fs3eVRfWmZVVfoBhmjgAye5ZUimo64hEFAUVjh0dZgDlXtNbOZs7rmToXcY/0kMb8oJ0yQ+O5ibxGBqfHbuIHlMfky8ihbqj+1aNMAGHv3FIyJHiVzo3Ef04uv4SwDBQb58qTvEcgJVvtYERrPmrsj8La0rdkSzCZF+C+0qj5hTsbTWIz+XBKncAcjdqhsaE9HdoaRzsazBmdjRNTrkbkC/apBQg=</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://studentzone-ngasce.nmims.edu/ltidemo/mettl_sso"/>
+  </md:IDPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en-US">NGASCE</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en-US">NMIMS</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en-US">https://distance.nmims.edu</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Shiv Golani</md:GivenName>
+    <md:EmailAddress>Shiv.Golani.EXT@nmims.edu</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor>

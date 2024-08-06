@@ -1,0 +1,179 @@
+
+body{
+	background-color:green!important;
+}
+
+
+.like-btn {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  text-transform: uppercase;
+  transition: all 20ms ease-out;
+  vertical-align: top;
+  background: url() center left no-repeat;
+  background-position: left 10px top 2px;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+}
+.like-btn::before {
+  content: ".";
+  opacity: 0;
+  display: block;
+  width: 44px;
+  height: 10px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+.like-btn .reaction-box {
+  position: absolute;
+  width: 250px;
+  height: 55px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 28px;
+  left: -25px;
+  bottom: 35px;
+  display: none;
+  z-index: 2;
+} 
+.like-btn .reaction-box .reaction-icon.like {
+  animation: fadeInLoad-like 0.3s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  background-position: 0px 0px;
+}
+.like-btn .reaction-box .reaction-icon.celebrate {
+  animation: fadeInLoad-celebrate 0.3s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  background-position: 0px -40px;
+}
+.like-btn .reaction-box .reaction-icon.love {
+  animation: fadeInLoad-love 0.3s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  background-position: 0px -80px;
+}
+.like-btn .reaction-box .reaction-icon.insightful {
+  animation: fadeInLoad-insightful 0.3s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  background-position: 0px -120px;
+}
+.like-btn .reaction-box .reaction-icon.curious {
+  animation: fadeInLoad-curious 0.3s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  background-position: 0px -160px;
+}
+.like-btn .reaction-box .like {
+  background: url(emojis/reactions/like.png); 
+}
+.like-btn .reaction-box .celebrate {
+  background: url(emojis/reactions/clap.png);
+}
+.like-btn .reaction-box .love {
+  background: url(emojis/reactions/love.png);
+}
+.like-btn .reaction-box .insightful {
+  background: url(emojis/reactions/insightful.png);
+}
+.like-btn .reaction-box .curious {
+  background: url(emojis/reactions/curious.png);
+}
+.like-btn .reaction-box .reaction-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 20px;
+  margin: 8px -1px 0 8px;
+  text-align: center;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translate(0, 100px) scale(0);
+}
+.like-btn .reaction-box .reaction-icon label {
+  padding: 3px 5px 3px 5px;
+  position: relative;
+  top: -24px;
+  border-radius: 10px;
+  font-size: 11px;
+  color: #fff;
+  background: #333;
+  visibility: hidden;
+}
+.like-btn .reaction-box .reaction-icon.show {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+  pointer-events: auto;
+}
+.like-btn .reaction-box .reaction-icon:hover {
+  transform: scale(1.4);
+  transform-origin: bottom;
+}
+.like-btn .reaction-box .reaction-icon:hover label {
+  visibility: visible;
+}
+.reactionButton.like {
+  background: url(emojis/reactions/like.png) no-repeat;
+  background-size: contain;
+  background-position-x: right;
+}
+.reactionButton.celebrate {
+  background: url(emojis/reactions/clap.png) no-repeat;
+  background-size: contain;
+  background-position-x: right;
+}
+.reactionButton.love {
+  background: url(emojis/reactions/love.png) no-repeat;
+  background-size: contain;
+  background-position-x: right;
+}
+.reactionButton.insightful {
+  background: url(emojis/reactions/insightful.png) no-repeat;
+  background-size: contain;
+  background-position-x: right;
+}
+.reactionButton.curious {
+  background: url(emojis/reactions/curious.png) no-repeat;
+  background-size: contain;
+  background-position-x: right;
+}
+.reactionButton {
+  width: 20px;
+  height: 22px;
+  padding-right: 8px;
+  border-radius: 20px;
+}
+.emojiName {
+  font-size: 13px;
+  padding: 2px;
+  color: gray; 
+  text-align: left;
+}
+.emoji {
+  background: #fff;
+  border-radius: 10px;
+  border-right: 2px solid #fff;
+  margin-left: -8px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  height: 18px !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.29);
+  display: inline-block;
+}
+
+ .usersHover {
+	background-color: #5c87b7a8;
+	padding: 5px 10px;
+	color: white;
+	border-radius: 3px;
+	position: absolute;
+	z-index: 1;
+    font-size:'13px';
+  }

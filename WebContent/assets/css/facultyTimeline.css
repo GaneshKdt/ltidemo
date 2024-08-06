@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+.reaction-btn-grp{
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  width: 100%;
+} 
+.reactCountDiv{
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.profile_pic {
+    box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.19);
+}
+.dropdown-menu:before {
+ display: none;
+}
